@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN bun install
 
 # Copy the project files into the Docker image
 COPY . .
 
 # Build the app
-RUN npm run build
+RUN bun build
 
 # Stage 2: Setting up the Bun runtime environment
 FROM public.ecr.aws/maxird/bun:1
