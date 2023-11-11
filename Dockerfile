@@ -1,5 +1,5 @@
 # Stage 1: Building the app
-FROM node:latest as build-stage
+FROM oven/bun:debian as build-stage
 
 # Set the working directory
 WORKDIR /app
