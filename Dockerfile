@@ -1,5 +1,5 @@
 # Stage 1: Building the app
-FROM oven/bun:debian as build-stage
+FROM public.ecr.aws/maxird/bun:1 as build-stage
 
 # Set the working directory
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Setting up the Bun runtime environment
-FROM oven/bun:debian
+FROM public.ecr.aws/maxird/bun:1
 
 # Set the working directory
 WORKDIR /app
