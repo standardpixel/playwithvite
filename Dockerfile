@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Setting up the Bun runtime environment
-FROM thedroneely/bun:edge
+FROM oven/bun:debian
 
 # Set the working directory
 WORKDIR /app
