@@ -14,7 +14,7 @@ RUN bun install
 COPY . .
 
 # Build the app
-RUN bun build
+RUN tsc && vite build
 
 # Stage 2: Setting up the Bun runtime environment
 FROM public.ecr.aws/maxird/bun:1
