@@ -1,9 +1,5 @@
 name: Deploy to Amazon ECS
 
-permissions:
-  id-token: write
-  contents: read
-
 on:
   push:
     branches:
@@ -13,6 +9,10 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
     - name: Checkout
