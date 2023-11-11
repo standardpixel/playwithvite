@@ -14,7 +14,7 @@ RUN bun install
 COPY . .
 
 # Build the app
-RUN bun ./node_modules/typescript/bin/tsc && ./node_modules/vite/bin/vite build
+RUN bun ./node_modules/typescript/bin/tsc && ./node_modules/vite/bin/vite.js build
 
 # Stage 2: Setting up the Bun runtime environment
 FROM public.ecr.aws/maxird/bun:1
